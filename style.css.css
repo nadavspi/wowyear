@@ -1,0 +1,52 @@
+/*
+Syntax error: File to import not found or unreadable: vendor/normalize.
+              Load paths:
+                /Users/nadav/Sites/wp/wp-content/themes/wowyear
+                /Users/nadav/Sites/wp/wp-content/themes/wowyear/sass
+        on line 1 of sass/style.css.sass
+
+1: @import vendor/normalize
+2: 
+3: @import bourbon/bourbon
+4: @import neat/neat
+
+Backtrace:
+sass/style.css.sass:1
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/import_node.rb:45:in `import'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/root_node.rb:20:in `render'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:315:in `_render'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:262:in `render'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:283:in `block in watch'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/listen-0.7.3/lib/listen/multi_listener.rb:108:in `call'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/listen-0.7.3/lib/listen/multi_listener.rb:108:in `on_change'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/listen-0.7.3/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `call'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/listen-0.7.3/lib/listen/adapter.rb:198:in `report_changes'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/listen-0.7.3/lib/listen/adapter.rb:210:in `poll_changed_dirs'
+/Users/nadav/.rvm/gems/ruby-2.0.0-p247/gems/listen-0.7.3/lib/listen/adapters/darwin.rb:38:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: vendor/normalize.\A               Load paths:\A                 /Users/nadav/Sites/wp/wp-content/themes/wowyear\A                 /Users/nadav/Sites/wp/wp-content/themes/wowyear/sass\A         on line 1 of sass/style.css.sass\A \A 1: @import vendor/normalize\A 2: \A 3: @import bourbon/bourbon\A 4: @import neat/neat"; }

@@ -1,0 +1,51 @@
+html
+  font-size: 5px
+  +media($medium)
+    font-size: 6px
+  +media($large)
+    font-size: 7px
+
+body
+  background-color: lighten(#e4e8ed,5%)
+  +rem(font-size, 3rem)
+  +rem(line-height, 4rem)
+  font-family: "proxima-nova", sans-serif
+  color: #222
+
+p
+  +rem(margin-bottom, 3rem)
+
+.wide
+  max-width: 100%
+
+h1,h2,h3,h4,h5,h6
+  font-family: "ff-enzo-web"
+  line-height: 1.1
+  +rem(margin-bottom, 3rem)
+
+h1 
+  +rem(font-size, 5rem)
+  +media($medium)
+    +rem(font-size, 6rem)
+  color: $orange
+  text-shadow: 2px 1px 2px $grey
+  font-weight: bold
+  +rem(margin-bottom, 3rem)
+    
+h2
+  +rem(font-size, 4rem)    
+  color: $light-blue
+
+h3
+  +rem(font-size, 4rem)
+
+img 
+  max-width: 100%
+
+.smallcaps
+  font-family: "proxima-nova-sc-osf"
+
+::selection
+  background-color: $light-blue
+  color: #fff
+

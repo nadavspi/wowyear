@@ -10,6 +10,8 @@
 
 	</div><!-- #content -->
 
+<?php /*
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<?php do_action( 'wowyear_credits' ); ?>
@@ -18,6 +20,8 @@
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'wowyear' ), 'WowYear', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
+
+  */ ?>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

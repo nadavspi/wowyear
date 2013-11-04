@@ -1,0 +1,43 @@
+.form-field, .form-submit
+  outline: none
+  border: none
+  width: 100%
+  // +media($medium)
+  //   width: 50%
+  // +media($large)
+  //   width: 100%
+
+.form-field
+  +rem(padding, 2rem)
+  +rem(margin, 1rem 0)
+  +media($large)
+    +rem(padding, 1rem)
+    +rem(margin, 0.5rem 0)
+  +placeholder
+    color: $orange
+  +transition(all 0.5s)
+  &:active, &:focus
+    color: darken($orange,10%)
+    // box-shadow: 1px 1px 10px $grey
+    +placeholder
+      color: darken($orange,10%)
+
+.form-submit
+  @extend .smallcaps
+  +rem(padding, 2rem 0)
+  border-radius: 2px
+  color: $dark-blue
+  background-color: $green
+  // border-bottom: 5px solid darken($green, 10%)
+  box-shadow: 0px 5px 0px darken($green, 10%)
+  &:hover
+    background-color: lighten($green,8%)
+    box-shadow: 0px 2px 0px darken($green, 10%)
+    position: relative
+    top: 3px
+  +media($medium)
+    width: 35%
+  +media($large)
+    +rem(padding, 1rem 0)
+    width: 50%
+  

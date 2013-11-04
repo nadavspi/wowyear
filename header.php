@@ -14,6 +14,8 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<script type="text/javascript" src="//use.typekit.net/ogd2qhe.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 <?php wp_head(); ?>
 </head>
@@ -22,10 +24,7 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<!-- <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2> -->
-		</div>
+		<img src="<?php bloginfo('template_directory'); ?>/images/wowyear-banner.jpg" alt="Wow Year 2014" class="site-banner">
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'wowyear' ); ?></h1>
