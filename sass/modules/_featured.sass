@@ -1,18 +1,21 @@
 .featured
-  border-top: 2px solid $grey
-  border-bottom: 2px solid $grey
+  border: 2px solid $grey
   clear: both
   margin-bottom: 0
+  background-color: #f8f5f0
 
 // ul of featured logos
 .featured-logos
   list-style-type: none
-  display: table
   width: 100%
+  text-align: center
   li
-    +span-columns(1)
-    +omega(4n)
-    vertical-align: middle
+    // +span-columns(1)
+    display: inline-block
+    img
+      float: left
+      max-height: 45px
+      +rem(padding, 1rem 2rem)
 
 
 
