@@ -353,54 +353,90 @@ html {
       font-size: 7px; } }
 
 body {
-  background-color: #f3f5f7;
-  font-size: 21px;
-  font-size: 3rem;
-  line-height: 28px;
-  line-height: 4rem;
-  font-family: "proxima-nova", sans-serif;
-  color: #222222; }
+  font-size: 17px;
+  font-size: 2.4rem;
+  line-height: 1.33;
+  font-family: "rooney-web", serif;
+  color: #222222;
+  margin: 0 3rem; }
 
 p {
+  margin-top: 0;
   margin-bottom: 21px;
   margin-bottom: 3rem; }
 
-.wide {
-  max-width: 100%; }
+p, h1, h2, h3, h4, h5, h6, .expert {
+  margin-bottom: 21px;
+  margin-bottom: 3rem; }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "ff-enzo-web";
+section {
+  margin-bottom: 35px;
+  margin-bottom: 5rem; }
+
+h1, h2, h3, h4, h5, h6, .mega, .giga {
+  font-family: "alternate-gothic-no-3-d";
+  font-weight: normal;
   line-height: 1.1;
-  margin-bottom: 21px;
-  margin-bottom: 3rem; }
+  margin: 21px 0;
+  margin: 3rem 0; }
+  h1 em, h2 em, h3 em, h4 em, h5 em, h6 em, .mega em, .giga em {
+    font-style: normal; }
+
+#giga {
+  margin-bottom: 0;
+  font-size: 70px;
+  font-size: 10rem;
+  letter-spacing: 1px;
+  color: #f79122;
+  text-shadow: 2px 3px 2px #ced5df;
+  text-transform: uppercase; }
+  @media screen and (min-width: 37.5em) {
+    #giga {
+      font-size: 112px;
+      font-size: 16rem;
+      text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.1), 6px 6px 0px rgba(0, 0, 0, 0.2); } }
+
+#mega {
+  margin-top: 0;
+  font-size: 42px;
+  font-size: 6rem;
+  letter-spacing: 1px;
+  color: #106085;
+  text-transform: uppercase;
+  margin-bottom: none;
+  text-align: center; }
+  @media screen and (min-width: 37.5em) {
+    #mega {
+      font-size: 63px;
+      font-size: 9rem;
+      text-shadow: 2px 3px 3px rgba(0, 0, 0, 0.3); } }
 
 h1 {
+  font-size: 49px;
+  font-size: 7rem;
+  color: #f79122; }
+
+h2 {
   font-size: 35px;
   font-size: 5rem;
   color: #f79122;
-  text-shadow: 2px 1px 2px #ced5df;
-  font-weight: bold;
-  margin-bottom: 21px;
-  margin-bottom: 3rem; }
+  text-align: center; }
   @media screen and (min-width: 37.5em) {
-    h1 {
-      font-size: 42px;
-      font-size: 6rem; } }
-
-h2 {
-  font-size: 28px;
-  font-size: 4rem;
-  color: #3fc8f4; }
+    h2 {
+      text-align: left; } }
 
 h3 {
   font-size: 28px;
-  font-size: 4rem; }
+  font-size: 4rem;
+  color: #106085; }
 
 img {
   max-width: 100%; }
 
-.smallcaps, .form-submit {
-  font-family: "proxima-nova-sc-osf"; }
+ul {
+  list-style-type: square;
+  margin-top: 7px;
+  margin-top: 1rem; }
 
 ::selection {
   background-color: #3fc8f4;
@@ -417,11 +453,13 @@ img {
   #page:after {
     clear: both; }
 
-#content {
-  margin: 0 1em; }
-  @media screen and (min-width: 1000px) {
-    #content {
-      margin: 0; } }
+.wrap {
+  padding: 42px auto;
+  padding: 6rem auto;
+  margin: 21px auto;
+  margin: 3rem auto;
+  clear: both;
+  background-color: #fdeedd; }
 
 .main-navigation {
   clear: both;
@@ -476,6 +514,32 @@ img {
 
   .main-navigation ul {
     display: none; } }
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.cf:after {
+  clear: both; }
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1; }
+
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important; }
@@ -503,8 +567,10 @@ img {
 
 .fitvids {
   max-width: 700px;
-  margin: 42px auto;
-  margin: 6rem auto; }
+  margin-bottom: 35px;
+  margin-bottom: 5rem;
+  margin-top: 21px;
+  margin-top: 3rem; }
 
 /* ==========================================================================
    Text utilities
@@ -564,21 +630,248 @@ img {
 .u-textInheritAllColor:active {
   color: inherit !important; }
 
-@media screen and (min-width: 61.25em) {
-  .home-callout {
+/* ==========================================================================
+   Spacing-specific utilities
+   ========================================================================== */
+/**
+ * Used to adjust the default spacing between components
+ * Use with great care!
+ *
+ * u-<type><direction><size>
+ *
+ * A = all
+ * T = top
+ * R = right
+ * B = bottom
+ * L = left
+ * H = horizontal
+ * V = vertical
+ *
+ * n = none
+ * s = small
+ * m = medium
+ * l = large
+ */
+/* All */
+.u-paddingAn {
+  padding: 0 !important; }
+
+.u-paddingAs {
+  padding: 5px !important; }
+
+.u-paddingAm {
+  padding: 10px !important; }
+
+.u-paddingAl {
+  padding: 20px !important; }
+
+.u-marginAn {
+  margin: 0 !important; }
+
+.u-marginAs {
+  margin: 5px !important; }
+
+.u-marginAm {
+  margin: 10px !important; }
+
+.u-marginAl {
+  margin: 20px !important; }
+
+/* Vertical */
+.u-paddingVn {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; }
+
+.u-paddingVs {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important; }
+
+.u-paddingVm {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important; }
+
+.u-paddingVl {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important; }
+
+.u-marginVn {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
+.u-marginVs {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important; }
+
+.u-marginVm {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important; }
+
+.u-marginVl {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important; }
+
+/* Horizontal */
+.u-paddingHn {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+.u-paddingHs {
+  padding-left: 5px !important;
+  padding-right: 5px !important; }
+
+.u-paddingHm {
+  padding-left: 10px !important;
+  padding-right: 10px !important; }
+
+.u-paddingHl {
+  padding-left: 20px !important;
+  padding-right: 20px !important; }
+
+.u-marginHn {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
+.u-marginHs {
+  margin-left: 5px !important;
+  margin-right: 5px !important; }
+
+.u-marginHm {
+  margin-left: 10px !important;
+  margin-right: 10px !important; }
+
+.u-marginHl {
+  margin-left: 20px !important;
+  margin-right: 20px !important; }
+
+/* Top */
+.u-paddingTn {
+  padding-top: 0 !important; }
+
+.u-paddingTs {
+  padding-top: 5px !important; }
+
+.u-paddingTm {
+  padding-top: 10px !important; }
+
+.u-paddingTl {
+  padding-top: 20px !important; }
+
+.u-marginTn {
+  margin-top: 0 !important; }
+
+.u-marginTs {
+  margin-top: 5px !important; }
+
+.u-marginTm {
+  margin-top: 10px !important; }
+
+.u-marginTl {
+  margin-top: 20px !important; }
+
+/* Bottom */
+.u-paddingBn {
+  padding-bottom: 0 !important; }
+
+.u-paddingBs {
+  padding-bottom: 5px !important; }
+
+.u-paddingBm {
+  padding-bottom: 10px !important; }
+
+.u-paddingBl {
+  padding-bottom: 20px !important; }
+
+.u-marginBn {
+  margin-bottom: 0 !important; }
+
+.u-marginBs {
+  margin-bottom: 5px !important; }
+
+.u-marginBm {
+  margin-bottom: 10px !important; }
+
+.u-marginBl {
+  margin-bottom: 20px !important; }
+
+/* Left */
+.u-paddingLn {
+  padding-left: 0 !important; }
+
+.u-paddingLs {
+  padding-left: 5px !important; }
+
+.u-paddingLm {
+  padding-left: 10px !important; }
+
+.u-paddingLl {
+  padding-left: 20px !important; }
+
+.u-marginLn {
+  margin-left: 0 !important; }
+
+.u-marginLs {
+  margin-left: 5px !important; }
+
+.u-marginLm {
+  margin-left: 10px !important; }
+
+.u-marginLl {
+  margin-left: 20px !important; }
+
+/* Right */
+.u-paddingRn {
+  padding-right: 0 !important; }
+
+.u-paddingRs {
+  padding-right: 5px !important; }
+
+.u-paddingRm {
+  padding-right: 10px !important; }
+
+.u-paddingRl {
+  padding-right: 20px !important; }
+
+.u-marginRn {
+  margin-right: 0 !important; }
+
+.u-marginRs {
+  margin-right: 5px !important; }
+
+.u-marginRm {
+  margin-right: 10px !important; }
+
+.u-marginRl {
+  margin-right: 20px !important; }
+
+.home-header {
+  font-size: 4rem;
+  margin-top: 21px;
+  margin-top: 3rem;
+  margin-bottom: 35px;
+  margin-bottom: 5rem;
+  text-align: center; }
+
+.home-hook {
+  margin-bottom: 35px;
+  margin-bottom: 5rem;
+  font-size: 4rem;
+  text-align: center; }
+
+@media screen and (min-width: 37.5em) {
+  .home-video {
     display: block;
     float: left;
-    margin-right: 2.35765%;
-    width: 57.35098%; }
-    .home-callout:last-child {
+    margin-right: 3.57866%;
+    width: 48.21067%; }
+    .home-video:last-child {
       margin-right: 0; } }
 
-@media screen and (min-width: 61.25em) {
+@media screen and (min-width: 37.5em) {
   .home-form {
     display: block;
     float: left;
-    margin-right: 2.35765%;
-    width: 40.29137%;
+    margin-right: 3.57866%;
+    width: 48.21067%;
     margin-right: 0; }
     .home-form:last-child {
       margin-right: 0; } }
@@ -593,6 +886,8 @@ img {
   padding: 2rem;
   margin: 7px 0;
   margin: 1rem 0;
+  box-shadow: 0px 0px 5px #ced5df;
+  color: #f79122;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s; }
@@ -611,7 +906,8 @@ img {
   .form-field:-ms-input-placeholder {
     color: #f79122; }
   .form-field:active, .form-field:focus {
-    color: #de7808; }
+    color: #de7808;
+    box-shadow: 0px 0px 8px #444444; }
     .form-field:active::-webkit-input-placeholder, .form-field:focus::-webkit-input-placeholder {
       color: #de7808; }
     .form-field:active:-moz-placeholder, .form-field:focus:-moz-placeholder {
@@ -620,8 +916,13 @@ img {
       color: #de7808; }
     .form-field:active:-ms-input-placeholder, .form-field:focus:-ms-input-placeholder {
       color: #de7808; }
+  @media screen and (min-width: 61.25em) {
+    .form-field {
+      width: 80%; } }
 
 .form-submit {
+  text-transform: uppercase;
+  font-size: 0.8em;
   padding: 14px 0;
   padding: 2rem 0;
   border-radius: 2px;
@@ -635,9 +936,47 @@ img {
     top: 3px; }
   @media screen and (min-width: 37.5em) {
     .form-submit {
-      width: 35%; } }
+      width: 45%; } }
   @media screen and (min-width: 61.25em) {
     .form-submit {
       padding: 7px 0;
-      padding: 1rem 0;
-      width: 50%; } }
+      padding: 1rem 0; } }
+
+.featured {
+  border-top: 2px solid #ced5df;
+  border-bottom: 2px solid #ced5df;
+  clear: both;
+  margin-bottom: 0; }
+
+.featured-logos {
+  list-style-type: none;
+  display: table;
+  width: 100%; }
+  .featured-logos li {
+    display: block;
+    float: left;
+    margin-right: 7.42297%;
+    width: 19.43277%;
+    vertical-align: middle; }
+    .featured-logos li:last-child {
+      margin-right: 0; }
+    .featured-logos li:nth-child(4n) {
+      margin-right: 0; }
+    .featured-logos li:nth-child(4n+1) {
+      clear: left; }
+
+.expert img {
+  max-width: 225px; }
+
+@media screen and (min-width: 61.25em) {
+  .expert {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .expert:last-child {
+      margin-right: 0; }
+    .expert:nth-child(3n) {
+      margin-right: 0; }
+    .expert:nth-child(3n+1) {
+      clear: left; } }

@@ -99,6 +99,8 @@ function wowyear_scripts() {
 
 	wp_enqueue_script( 'fitvids', get_template_directory_uri() . '/js/jquery.fitvids.js', array('jquery'), '20131103', true);
 
+	wp_enqueue_script( 'fittext', get_template_directory_uri() . '/js/jquery.fittext.js', array('jquery'), '20131105', true);
+
 	wp_enqueue_script( 'wowyear-js', get_template_directory_uri() . '/js/site.js', array('jquery'), '20131103', true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -136,4 +138,5 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+require get_template_directory() . '/inc/shortcodes.php';
 

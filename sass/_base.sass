@@ -6,44 +6,78 @@ html
     font-size: 7px
 
 body
-  background-color: lighten(#e4e8ed,5%)
-  +rem(font-size, 3rem)
-  +rem(line-height, 4rem)
-  font-family: "proxima-nova", sans-serif
+  // background-color: lighten(#e4e8ed,5%)
+  +rem(font-size, 2.4rem)
+  line-height: 1.33
+  font-family: "rooney-web", serif
   color: #222
+  margin: 0 3rem
 
 p
+  margin-top: 0
   +rem(margin-bottom, 3rem)
 
-.wide
-  max-width: 100%
+p, h1,h2,h3,h4,h5,h6, .expert
+  +rem(margin-bottom, 3rem)
 
-h1,h2,h3,h4,h5,h6
-  font-family: "ff-enzo-web"
+section
+  +rem(margin-bottom, 5rem)
+
+h1,h2,h3,h4,h5,h6,.mega,.giga
+  font-family: "alternate-gothic-no-3-d"
+  font-weight: normal
   line-height: 1.1
-  +rem(margin-bottom, 3rem)
+  +rem(margin, 3rem 0)
+  em
+    font-style: normal
+
+// h1,h2,h3,h4,h5,h6
+//   +rem(margin-bottom, 4rem)
+
+#giga
+  margin-bottom: 0
+  +rem(font-size, 10rem)
+  letter-spacing: 1px
+  color: $orange
+  text-shadow: 2px 3px 2px $grey
+  text-transform: uppercase
+  +media($medium)
+    +rem(font-size, 16rem)
+    text-shadow: 2px 3px 2px rgba(0,0,0,0.1), 6px 6px 0px rgba(0,0,0,0.2)
+
+#mega
+  margin-top: 0
+  +rem(font-size, 6rem)
+  letter-spacing: 1px
+  color: $dark-blue
+  text-transform: uppercase
+  margin-bottom: none
+  text-align: center
+  +media($medium)
+    +rem(font-size, 9rem)
+    text-shadow: 2px 3px 3px rgba(0,0,0,0.3)
 
 h1 
-  +rem(font-size, 5rem)
-  +media($medium)
-    +rem(font-size, 6rem)
+  +rem(font-size, 7rem)
   color: $orange
-  text-shadow: 2px 1px 2px $grey
-  font-weight: bold
-  +rem(margin-bottom, 3rem)
     
 h2
-  +rem(font-size, 4rem)    
-  color: $light-blue
+  +rem(font-size, 5rem) 
+  color: $orange
+  text-align: center
+  +media($medium)
+    text-align: left
 
 h3
   +rem(font-size, 4rem)
+  color: $dark-blue
 
-img 
+img
   max-width: 100%
 
-.smallcaps
-  font-family: "proxima-nova-sc-osf"
+ul 
+  list-style-type: square
+  +rem(margin-top, 1rem)
 
 ::selection
   background-color: $light-blue
