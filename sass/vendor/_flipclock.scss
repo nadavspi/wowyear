@@ -39,6 +39,7 @@
     min-height: 100%;
     // font: normal 11px "Helvetica Neue", Helvetica, sans-serif;
     -webkit-user-select: none;
+    font-size: 0.9em;
 }
 
 .flip-clock-meridium {
@@ -68,8 +69,7 @@
     font-size: 80px;
     font-weight: bold;
     line-height: 87px;
-    border-radius: 6px_prefixed
-    ;
+    border-radius: 6px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .7);
 }
 
@@ -188,7 +188,7 @@
 
 .flip-clock-divider .flip-clock-label {
   position: absolute;
-  top: -1.5em;
+  bottom: -1.5em;
   right: -86px;
   color: black;
   text-shadow: none;
