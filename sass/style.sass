@@ -1,29 +1,33 @@
-$base-font-size: 7px
-
 @import vendor/normalize
-@import vendor/rem
 
-
+// bourbon and neat stuff
 @import bourbon/bourbon
 @import partials/neat-settings
 @import neat/neat
 @import vendor/omega-reset
 
+// setup stuff
 @import partials/vars
+@import modules/mixins
+@import modules/clearfix
+@import vendor/rem
+
+// vendor stuff
+@import vendor/underscore
+@import vendor/suit/text
+@import vendor/suit/space
+@import modules/fitvids
+@import vendor/flipclock
+@import modules/countdown
+
+// my stuff
 @import base
 @import modules/page
 @import modules/wrap
 @import modules/navigation
-@import modules/clearfix
-@import vendor/underscore
-@import modules/fitvids
-@import vendor/suit/text
-@import vendor/suit/space
 @import modules/home
 @import modules/form
 @import modules/featured
 @import modules/expert
 
 
-@import vendor/flipclock
-@import modules/countdown
