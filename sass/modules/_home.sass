@@ -13,11 +13,13 @@
 
 .home-form
   h2
-    color: $dark-blue
+    // color: $red
   +rem(margin-bottom, 5rem)
   +rem(margin-top, 5rem)
   +rem(padding, 0 5rem)
-  border: 4px solid $orange
+  border: 4px solid $dark-blue
+  +media($medium)
+    border-width: 6px
   box-shadow: 1px 1px 1px $grey, -1px -1px 1px $grey
   // background-color: lighten(tint($light-blue,80%),2%)
   // background-color: $tan
