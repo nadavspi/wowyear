@@ -11,18 +11,18 @@
   +rem(margin, 1rem 0 2rem)
   +media($large)
     +rem(padding, 1rem)
-  background-color: $tan
+  // background-color: $tan
+  border: 1px solid $grey
   box-shadow: 0px 0px 5px $grey
   color: $orange
   +placeholder
-    color: $orange
+    color: $grey
   +transition(all 0.5s)
   &:active, &:focus
     color: darken($orange,10%)
     box-shadow: 0px 0px 8px #444
     +placeholder
-      color: darken($orange,10%)
-
+      color: white
 .form-submit
   text-transform: uppercase
   letter-spacing: 1px
