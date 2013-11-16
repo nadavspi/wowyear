@@ -21,7 +21,7 @@ p, h1,h2,h3,h4,h5,h6, .expert
   +rem(margin-bottom, 3rem)
 
 .lead
-  +rem(font-size, 4rem)
+  +rem(font-size, 3rem)
 
 section
   +rem(margin-bottom, 5rem)
@@ -80,7 +80,17 @@ ul
   list-style-type: square
   +rem(margin-top, 1rem)
 
+.checkmark
+  list-style-image: url('images/checkmark.svg')
+
+blockquote
+  border-left: 4px solid $orange
+  +rem(padding-left, 2rem)
+  footer:before
+    content: "\2014"
+
 ::selection
   background-color: $light-blue
   color: #fff
+
 
