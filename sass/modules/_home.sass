@@ -3,19 +3,18 @@
   +rem(margin-top, 3rem)
   text-align: center
   
-.home-hook
+.home-benefits
   @extend .lead
-  text-align: center
-
-.home-video
-  +media($medium)
-    +span-columns(4)
+  // text-align: center
+  +rem(margin-top, 5rem)
+  ul li
+    +rem(margin-bottom, 2rem)
 
 .home-form
   h2
     color: $red
   +rem(margin-bottom, 5rem)
-  +rem(margin-top, 5rem)
+  // +rem(margin-top, 5rem)
   +rem(padding, 0 5rem)
   border: 4px solid $dark-blue
   +media($medium)
@@ -24,9 +23,9 @@
   // background-color: lighten(tint($light-blue,80%),2%)
   // background-color: $tan
   +border-radius-large
-  +media($medium)
-    +span-columns(4)
-    +omega
-
+  // +media($large)
+  //   +span-columns(6)
+  //   +omega
+  //   float: right
 
   
