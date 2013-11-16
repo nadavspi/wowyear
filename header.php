@@ -24,7 +24,7 @@
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
-		<img src="<?php bloginfo('template_directory'); ?>/images/wowyear-banner.jpg" alt="Wow Year 2014" class="site-banner">
+		<!-- <img src="<?php bloginfo('template_directory'); ?>/images/wowyear-banner.jpg" alt="Wow Year 2014" class="site-banner"> -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<h1 class="menu-toggle"><?php _e( 'Menu', 'wowyear' ); ?></h1>
