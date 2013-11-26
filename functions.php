@@ -115,6 +115,7 @@ function wowyear_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'wowyear_scripts' );
 
+
 /**
  * Implement the Custom Header feature.
  */
