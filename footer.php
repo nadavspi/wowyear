@@ -10,18 +10,14 @@
 
 	</div><!-- #content -->
 
-<?php /*
+	<footer id="site-footer" class="cf" role="contentinfo">
+    <?php
+    if(is_active_sidebar('site-footer')){
+    dynamic_sidebar('site-footer');
+    }
+    ?>
+	</footer>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<?php do_action( 'wowyear_credits' ); ?>
-			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'wowyear' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'wowyear' ), 'WowYear', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-
-  */ ?>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

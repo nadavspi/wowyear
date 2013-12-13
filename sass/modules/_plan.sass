@@ -1,0 +1,93 @@
+$plan-border-radius: 10px
+$plan-border-color: $dark-blue
+
+.plan
+  // background-color: $tan
+  +rem(margin-bottom, 3rem)
+  background-color: #f8f8f8
+  border-radius: $plan-border-radius
+  // text-align: center
+  border: 2px solid $dark-blue
+  header
+    // background-color: lighten(#EAE9E4,2%)
+    border-radius: $plan-border-radius
+    text-align: center
+    +rem(padding, 1rem 0)
+    border-bottom: 2px solid $dark-blue
+    border-radius: 0
+  ul
+    margin: 0
+    // +rem(padding, 0 3rem)
+    // padding: 0
+    @extend .checkmark
+  li
+    +rem(padding, 2rem) 
+  li + li
+    // border-top: 1px solid $dark-blue
+  +media($medium)
+    +span-columns(4)
+    +omega(3n)
+    margin-bottom: 0
+  +media($large)
+    +span-columns(3)
+    // +omega(3n)
+    &:nth-of-type(2)
+      +span-columns(4)
+
+.plan--highlighted
+  // background-color: lighten(#ece6da,5%)
+  border-color: $red
+  border-width: 4px
+  header
+    border-color: $red
+    h2
+      color: $dark-blue
+  .plan-button
+    @extend .button--important
+  li + li, .plan-pricing, .plan-cta
+    // border-width: 2px
+    border-color: $red
+  +media($medium)
+    +span-columns(4)
+    +shift(2)
+    +rem(margin-bottom, 3rem)
+  +media($large)
+    +span-columns(5)
+    +shift(0)
+    margin-bottom: 0
+
+.plan-pricing
+  text-align: center
+  +rem(padding-bottom, 3rem)
+  background-color: #ece6da
+  @extend %plan-border
+  h3
+    margin-bottom: 0
+
+.plan-price
+  color: $dark-blue
+  +rem(margin, 1rem 0)
+
+.plan-value
+  font-size: 0.8em
+  color: #777
+  text-decoration: line-through
+  margin-right: 0.3em
+
+.plan-cta
+  +rem(padding, 5rem 0)
+  text-align: center
+  border-top: 1px solid $plan-border-color
+  border-bottom-left-radius: $plan-border-radius
+  border-bottom-right-radius: $plan-border-radius
+
+.plan-button
+  @extend .button
+  @extend .button--friendly
+  +rem(padding, 1.5rem 1rem)
+
+
+
+%plan-border
+  border-top: 1px solid $plan-border-color
+  border-bottom: 1px solid $plan-border-color

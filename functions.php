@@ -67,7 +67,15 @@ add_action( 'after_setup_theme', 'wowyear_setup' );
 /**
  * Register widgetized area and update sidebar with default widgets
  */
-// function wowyear_widgets_init() {
+function wowyear_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Footer', 'wowyear' ),
+		'id'            => 'site-footer',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
 // 	register_sidebar( array(
 // 		'name'          => __( 'Sidebar', 'wowyear' ),
 // 		'id'            => 'sidebar-1',
@@ -76,8 +84,8 @@ add_action( 'after_setup_theme', 'wowyear_setup' );
 // 		'before_title'  => '<h1 class="widget-title">',
 // 		'after_title'   => '</h1>',
 // 	) );
-// }
-// add_action( 'widgets_init', 'wowyear_widgets_init' );
+}
+add_action( 'widgets_init', 'wowyear_widgets_init' );
 
 /**
  * Enqueue scripts and styles
@@ -143,3 +151,9 @@ require get_template_directory() . '/inc/jetpack.php';
 
 require get_template_directory() . '/inc/shortcodes.php';
 
+
+/**
+* Turn off auto paragraphs for saner editing 
+*/
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );

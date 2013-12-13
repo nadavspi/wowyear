@@ -13,3 +13,25 @@
 .omega--large
   +media($large)
     +omega
+
+.matrix-element
+  img
+    max-width: 225px   
+  border-bottom: 1px solid $grey  
+  +media($medium)
+    border: none
+    +span-columns(4)
+    +omega(2n)
+    &:nth-child(2n+1):last-child
+      +shift(2)
+  +media($large)
+    +omega-reset(2n, 12)
+    +span-columns(4)
+    +omega(3n)
+    &:nth-child(2n+1):last-child // undo the shift from medium breakpoint
+      +shift(0)
+    &:nth-child(3n+1):last-child
+      +span-columns(6)
+      +shift(3)
+
+

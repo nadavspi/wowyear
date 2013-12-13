@@ -1,0 +1,31 @@
+.button
+  text-decoration: none
+  text-transform: uppercase
+  letter-spacing: 1px
+  +rem(padding, 1.5rem 1.0rem)
+  border-radius: 2px
+  border: none
+ 
+
+.button--important
+  color: #fff
+  background-color: $red
+  box-shadow: 0px 5px 0px darken($red, 10%)
+  +transition(all 0.25s)
+  &:hover
+    background-color: darken($red,3%)
+
+.button--friendly
+  color: $dark-blue
+  background-color: $green
+  box-shadow: 0px 5px 0px darken($green, 10%)
+  &:hover
+    background-color: lighten($green,8%)
+
+.button--disabled, .button--disabled:hover
+  color: #000
+  background-color: darken($grey,10%)
+  box-shadow: 0px 5px 0px darken($grey, 25%) 
+  opacity: 0.4
+  cursor: not-allowed
+  &:hover

@@ -24,29 +24,4 @@
     +placeholder
       color: white
 .form-submit
-  text-transform: uppercase
-  letter-spacing: 1px
-  +rem(padding, 1.5rem 0)
-  border-radius: 2px
-  color: $dark-blue
-  background-color: $green
-  box-shadow: 0px 5px 0px darken($green, 10%)
-  &:hover
-    background-color: lighten($green,8%)
-    // box-shadow: 0px 2px 0px darken($green, 10%)
-    // position: relative
-    // top: 3px
-
-
-.button--important
-  color: #fff
-  background-color: $red
-  box-shadow: 0px 5px 0px darken($red, 10%)
-  +transition(all 0.25s)
-  &:hover
-    background-color: darken($red,3%)
-    // box-shadow: 0px 2px 0px darken($red, 20%)
-    // position: relative
-    // top: 3px
-
-  
+  @extend .button

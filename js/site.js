@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $(".fitvids").fitVids({ customSelector: "iframe[src*='fast.wistia.net']"});
-  $("#giga").fitText(0.6);
+  $("#giga-js").fitText(0.5);
+  $("#mega-js").fitText(0.9, { minFontSize: '40px'});
 
   var date  = new Date(Date.UTC(2014, 0, 13, 12, 0, 0));
   var now   = new Date();
@@ -15,3 +16,14 @@ $(document).ready(function() {
     event.preventDefault();
   });
 });
+
+// $(window).scroll(function() {
+//     $('#FadeInOnScroll').each(function(){
+//     var imagePos = $(this).offset().top;
+
+//     var topOfWindow = $(window).scrollTop();
+//       if (imagePos < topOfWindow+600) {
+//         $(this).addClass("slideUp");
+//       }
+//     });
+//   });
