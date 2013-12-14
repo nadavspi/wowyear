@@ -4,23 +4,58 @@
 .expert
   @extend .matrix-element
 
+.info
+  & > header
+    +rem(margin-bottom, 8rem)
+
 .expert-info
-  +rem(margin-bottom, 15rem)
+  +rem(margin-bottom, 8rem)
+  & + &
+    border-top: 1px solid $grey
+    +rem(padding-top, 8rem)
   & > header
     @extend .cf
     +rem(margin-bottom, 5rem)
-    +media($large)
-      +shift(1)
     img
       max-height: 225px 
+      max-width: 225px
       +media($medium)
-        +rem(margin-right, 6rem)
-        float: left
-    h2
-      margin-bottom: 0
-    h3 
+        +span-columns(3)
+    article
+      +media($medium)
+        +span-columns(5)
+    h1 //date 
       margin: 0
+    h2 //name
+      @extend .h1
+      color: $orange
+      margin: 0
+    h3 //talk title
+      @extend .h2
+      color: $dark-blue
+      margin-top: 0
+    h4 //date
+      @extend .h3
+      color: #222
+      margin-top: 0
+
+.expert-talk
+  @extend .half
+
+.expert-bio
+  @extend .half
+  @extend .omega
+
+.expert-offer
+  @extend .cf
+  clear: both
+  @extend %border-box
+  @extend .wrap
+  margin-left: auto
+  margin-right: auto
+  +rem(margin-top, 8rem)
+  +rem(padding-bottom, 3rem)
 
 .replay-iframe
-  display: none
-  +rem(margin, 5rem 0)
+  +rem(margin, 2rem 0)
+
