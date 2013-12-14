@@ -3,3 +3,24 @@
 
 .expert
   @extend .matrix-element
+
+.expert-info
+  +rem(margin-bottom, 15rem)
+  & > header
+    @extend .cf
+    +rem(margin-bottom, 5rem)
+    +media($large)
+      +shift(1)
+    img
+      max-width: 225px 
+      +media($medium)
+        +rem(margin-right, 6rem)
+        float: left
+    h2
+      margin-bottom: 0
+    h3 
+      margin: 0
+
+.replay-iframe
+  display: none
+  +rem(margin, 5rem 0)
