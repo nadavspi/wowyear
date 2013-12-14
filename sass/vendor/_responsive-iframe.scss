@@ -3,7 +3,7 @@
     padding-bottom: 56.25%;
     padding-top: 30px;
     height: 0;
-    overflow: hidden;
+    // overflow: hidden;
 }
  
 .responsive-iframe-container iframe,   
@@ -14,4 +14,5 @@
     left: 0;
     width: 100%;
     height: 100%;
+    max-width: 100%;
 }
