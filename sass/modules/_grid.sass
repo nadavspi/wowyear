@@ -16,7 +16,9 @@
 
 .matrix-element
   img
-    max-height: 225px   
+    max-height: 225px  
+    +media($large) 
+      height: 225px
   border-bottom: 1px solid $grey  
   +media($medium)
     border: none
