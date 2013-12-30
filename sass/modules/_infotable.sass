@@ -1,0 +1,31 @@
+.info-nav 
+  +rem(margin-bottom, 12rem)
+  @extend .box
+  max-width: 50em
+  table
+    +rem(margin, 4rem auto)
+    +media(515px)
+      border: 1px solid $grey
+    tr
+      border-bottom: 1px solid $grey
+      &:nth-of-type(even)
+        background: $tan
+    th
+      +media(515px)
+        border-right: 2px solid $grey
+      text-align: center
+    td
+      padding: 1em 2em 1em 1em
+      border: 1px solid $grey
+
+@media only screen and (max-width: 515px)
+  table, th, td, tr
+    display: block
+    width: 100%
+  tr
+    border: 1px solid $grey
+  th
+    padding: 0.5em 0
+  td
+    border: none
+    border-bottom: 1px solid $grey
