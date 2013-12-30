@@ -5,9 +5,20 @@
 .gift
   @extend .matrix-element
   +rem(padding, 1rem)
-  div // div contaning the image
+  div:first-of-type // div contaning the image
     height: 160px
   img
     max-height: 150px 
   h3
     height: 2em
+  .button
+    margin-bottom: 4rem
+
+.gifts-page
+  .gift
+    +rem(margin-bottom, 8rem)
+    p
+      +media($medium)
+        height: 8em
+      +media($large)
+        height: 12em

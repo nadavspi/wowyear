@@ -41,10 +41,13 @@
 
 .expert-talk
   @extend .half
+  +rem(margin-top, 5rem)
 
 .expert-bio
   @extend .half
   @extend .omega
+  +rem(margin-top, 5rem)
+  +rem(margin-bottom, 5rem)
 
 .expert-offer
   @extend .cf
@@ -53,9 +56,20 @@
   @extend .wrap
   margin-left: auto
   margin-right: auto
-  +rem(margin-top, 8rem)
   +rem(padding-bottom, 3rem)
 
 .replay-iframe
   +rem(margin, 2rem 0)
+
+.chatwing 
+  @extend .responsive-iframe-container
+  max-width: 600px
+  margin-left: auto
+  margin-right: auto
+
+.replay-info
+  p
+    +rem(margin-top, 5rem)
+    +rem(margin-bottom, 1rem)
+
 

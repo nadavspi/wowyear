@@ -13,3 +13,14 @@
     border-width: 6px
   box-shadow: 1px 1px 1px $grey, -1px -1px 1px $grey
   +border-radius-large
+
+.box
+  @extend %border-box
+  @extend .wrap
+  margin-left: auto
+  margin-right: auto
+  +rem(margin-bottom, 5rem)
+
+.box--live
+  @extend .box
+  +rem(padding-bottom, 3rem)
