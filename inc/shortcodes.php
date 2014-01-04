@@ -11,7 +11,7 @@ function logo_func( $atts ){
         'src' => 'NBC',
      ), $atts));
   // return '<object data="wp-content/themes/wowyear/images/logos/' . $src .'.svg" type="image/svg+xml" class="svg-content"><!--[if lte IE 8 ]--><img src="images/logos/' . $src . '.png" alt="NBC"><!--![endif]--></object>';
-  return '<img src="wp-content/themes/wowyear/images/logos/' . $src . '.png" alt="' . $src . '">';
+  return '<img src="http://www.balancedmoments.com/wowyear/wp-content/themes/wowyear/images/logos/' . $src . '.png" alt="' . $src . '">';
 }
 add_shortcode( 'logo', 'logo_func' );
 
