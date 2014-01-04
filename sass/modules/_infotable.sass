@@ -8,8 +8,8 @@
       border: 1px solid $grey
     tr
       border-bottom: 1px solid $grey
-      &:nth-of-type(even)
-        background: $tan
+      // &:nth-of-type(even)
+      //   background: $tan
     th
       +media(515px)
         border-right: 2px solid $grey
@@ -17,6 +17,10 @@
     td
       padding: 1em 2em 1em 1em
       border: 1px solid $grey
+    img // mini headshots
+      height: 35px
+      float: left
+      margin-right: 0.5em
   @media only screen and (max-width: 515px)
     table, th, td, tr
       display: block
@@ -28,3 +32,7 @@
     td
       border: none
       border-bottom: 1px solid $grey
+
+.info-backtotop
+  +rem(margin, 1rem 0 5rem 0)
+  display: inline-block
