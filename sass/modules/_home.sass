@@ -3,18 +3,23 @@
   +media($medium)
     +rem(font-size, 4rem)
   +rem(margin-top, 3rem)
+  +rem(margin-bottom, 6rem)
   text-align: center
 
 .home-video
-  // +rem(margin-bottom, 5rem)
   +rem(margin-top, 5rem)
   +media($medium)
     +rem(margin-top, 6rem)
+  &:not(.half)
+    margin-left: auto
+    margin-right: auto
 
 .home-benefits
   @extend .lead
-  // text-align: center
   +rem(margin-top, 5rem)
+  &:not(.half)
+    @extend .wrap
+    +rem(margin, 8rem auto)
   ul 
     +media($large)
       padding-left: 0
